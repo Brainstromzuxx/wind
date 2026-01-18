@@ -1,0 +1,14 @@
+#This is ansible main file.
+
+---
+- hosts: all
+  remote_user: admin
+  tasks:
+    - name: install a application
+        name: httpd
+        state: present
+    - name: restart the application
+        name: httpd
+        started: yes
+...
+          
